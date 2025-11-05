@@ -1,4 +1,5 @@
-from embedding import get_embedding
+import faiss
+from functions.embedding import get_embedding
 
 def sort_index(query, text, embeddings, k):
   dim = embeddings.shape[1]
