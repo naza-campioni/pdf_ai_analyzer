@@ -1,6 +1,6 @@
 from embedding import get_embedding
 
-def query_index(query, text, embeddings, k):
+def sort_index(query, text, embeddings, k):
   dim = embeddings.shape[1]
   index = faiss.IndexFlatL2(dim)
   index.add(embeddings)
