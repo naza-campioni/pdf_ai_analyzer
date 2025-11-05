@@ -1,8 +1,8 @@
 # main function
-from embedding import get_embedding
-from sort_index import sort_index
-from generate_answer import generate_answer
-from tokenize_pdf import tokenize_pdf
+from functions.embedding import get_embedding
+from functions.sort_index import sort_index
+from functions.generate_answer import generate_answer
+from functions.tokenize_pdf import tokenize_pdf
 
 def main(text, query, k=5):
   """
