@@ -15,11 +15,12 @@ token_pdf = tokenize_pdf(pdf)
 # outputs a decoded (human language) tokenized version of the input 
 
 # 3) embed tokenized pdf (easier and safer to embed after tokenization)
-embeddings = get_embedding(token_pdf)
+#embeddings = get_embedding(token_pdf)
 
 # 4) input query and output retrieved text from the query
 query = st.text_input("What's your question?")
 # query = 'what job is nazareno working'
-retrieved_text = query_index(query, token_pdf, embeddings, k=3)
+#retrieved_text = query_index(query, token_pdf, embeddings, k=3)
 
-st.write(retrieved_text)
+#st.write(retrieved_text)
+st.write(token_pdf)
