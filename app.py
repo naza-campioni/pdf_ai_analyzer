@@ -3,7 +3,7 @@ import streamlit as st
 
 from functions.tokenize_pdf import tokenize_pdf
 from functions.embedding import get_embedding
-from functions.sort index import sort_index
+from functions.sort_index import sort_index
 
 headers = ["Hi, how can I help you?", "Hi, how can I assist you?", "What are we learning today?"]
 index = random.randint(0, len(headers) - 1)
