@@ -1,4 +1,4 @@
-from tokenize_pdf import tokenize_pdf
+from functions.tokenize_pdf import tokenize_pdf
 
 def generate_summary(pdf):
     """
