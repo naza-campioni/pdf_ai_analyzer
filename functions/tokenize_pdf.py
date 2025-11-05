@@ -1,5 +1,5 @@
 from pypdf import PdfReader
-from tokenizer import tok_and_chunk
+from functions.tokenizer import tok_and_chunk
 
 def tokenize_pdf(pdf, model="text-embedding-3-small", max_tokens=500, overlap=50):
   reader = PdfReader(pdf)
