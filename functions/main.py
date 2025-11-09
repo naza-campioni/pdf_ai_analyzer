@@ -2,7 +2,7 @@
 import os
 from openai import OpenAI
 
-from functions.embedding import get_embedding
+from functions.embeddings import get_embedding
 from functions.sort_index import sort_index
 from functions.generate_answer import generate_answer
 from functions.tokenize_pdf import tokenize_pdf
