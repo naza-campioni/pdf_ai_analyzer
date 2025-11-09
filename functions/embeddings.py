@@ -1,3 +1,6 @@
+import os
+from openai import OpenAI
+
 def get_embedding(text):
   """
   Returns a stacked list of embeddings for the given text.
@@ -8,6 +11,9 @@ def get_embedding(text):
   Returns:
   A list of embeddings.  
   """
+
+  my_key = os.getenv("OPENAI_API_KEY")
+  client = OpenAI(api_key=my_key)
 
   # texts = [t['text'] for t in text] # strings only for embeddings
   response = client.embeddings.create(
