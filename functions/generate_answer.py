@@ -6,12 +6,15 @@ def generate_answer(query, retrieved_text):
     query: the user question
     retrieved_text: string containing the most relevant chunk(s)
     """
+
+    my_key = os.getenv("OPENAI_API_KEY")
+    client = OpenAI(api_key=my_key)
+
     prompt = f"""
     Your aim is to analyze the input and answer any input-specific questions using ONLY the information provided below.
     If the information is not in the context, say you don't know. 
 
-    my_key = os.getenv("OPENAI_API_KEY")
-    client = OpenAI(api_key=my_key)
+    
 
     Context:
     {retrieved_text}
