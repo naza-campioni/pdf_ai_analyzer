@@ -1,10 +1,15 @@
+import os
+from openai import OpenAI
 from functions.tokenize_pdf import tokenize_pdf
+
 
 def generate_summary(pdf):
     """
     Generates extensive summary of the input pdf.
     """
-  
+    my_key = os.getenv("OPENAI_API_KEY")
+    client = OpenAI(api_key=my_key)  
+
     token_pdf = tokenize_pdf(pdf)
     query = 'Give an extensive summary of the content'
     prompt = f"""
