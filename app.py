@@ -26,7 +26,7 @@ if pdf:
 
 	# 4) input query and output retrieved text from the query
 	query = st.text_input("What's your question?")
-	retrieved_text = query_index(query, token_pdf, embeddings, k=3)
+	retrieved_text = sort_index(query, token_pdf, embeddings, k=3)
 
 	st.write(retrieved_text)
 	#st.write(token_pdf)
