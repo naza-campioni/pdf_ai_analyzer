@@ -1,5 +1,7 @@
 import os
 from openai import OpenAI
+from langdetect import detect
+
 from functions.tokenize_pdf import tokenize_pdf
 
 
@@ -11,9 +13,11 @@ def generate_summary(pdf):
     client = OpenAI(api_key=my_key)  
 
     token_pdf = tokenize_pdf(pdf)
+    lang = detect(str(tokenize_pdf))
+
     query = 'Give an extensive summary of the content'
     prompt = f"""
-    Your aim is to analyze the input and give a detailed summary of the content. You should start by saying "The document 
+    Your aim is to analyze the input and give a detailed summary of the content in the language {lang}. You should start by saying "The document 
     discusses/the document talks about" etc and give an overview on the topic. Then you should summarize in details the content.
     The summary should be so that when reading it the person knows everything important and nothing is left out. Stick to the information 
     provided in the input Avoid commenting the input - just state objectively what's written, do not write opinions about it.
