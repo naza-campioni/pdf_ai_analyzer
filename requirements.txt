@@ -5,4 +5,4 @@ pypdf
 streamlit
 numpy
 langdetect
-dotenv
+python-dotenv
