@@ -4,3 +4,5 @@ tiktoken
 pypdf
 streamlit
 numpy
+langdetect
+dotenv
