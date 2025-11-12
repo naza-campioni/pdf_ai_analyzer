@@ -10,3 +10,13 @@ It uses a **Retrieval-Augmented Generation (RAG)** pipeline under the hood — c
 - **PDF Upload & Processing**: Upload a PDF file and automatically generates a summary.
 - **Contextual Q&A**: Ask custom questions about your document and receive AI-generated answers.
 
+---
+
+## Future works
+
+- **Chat-like frontend**: Implement chat-like configuration.
+- **Multiple document**: Enable uploading multiple PDF files.
+
+---
+
+***Now live at***: https://pdf-ai-analyzer.onrender.com
